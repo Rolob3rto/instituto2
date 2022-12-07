@@ -6,10 +6,10 @@ public class Alumno {
     private String apellidos;
     private String email;
     private String dni;
-    private String fechaNacimiento;
+    private Date fechaNacimiento;
     private boolean nuevo;
     
-    public Alumno(int codigo, String nombre, String apellidos, String email, String dni, String fechaNacimiento,
+    public Alumno(int codigo, String nombre, String apellidos, String email, String dni, Date fechaNacimiento,
              boolean nuevo) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -66,13 +66,6 @@ public class Alumno {
         this.dni = dni;
     }
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
 
     public boolean isNuevo() {
         return nuevo;
@@ -81,6 +74,14 @@ public class Alumno {
     public void setNuevo(boolean nuevo) {
         this.nuevo = nuevo;
     }
+    
+        public Date getFechaNacimiento() {
+            return fechaNacimiento;
+        }
+    
+        public void setFechaNacimiento(Date fechaNacimiento) {
+            this.fechaNacimiento = fechaNacimiento;
+        }
 
     @Override
     public int hashCode() {
@@ -103,9 +104,6 @@ public class Alumno {
             return false;
         return true;
     }
-
-
-
     
     
 }

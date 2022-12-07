@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+  <div th:fragment="menu">
+    <!-- MENU PRINCIPAL -->
+
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Instituto</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" th:href="@{/}" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/productos/list}"
+                href="../alumnos/list.html">Alumnos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/clientes/list}"
+                href="../clientes/list.html">Clientes</a>
+            </li>
+                   
+          </ul>
+          <!-- <div th:if="${session}">
+            <div th:with="condicion = ${session.pedido}">
+              <a th:if="${condicion}" th:href="@{/login/logout}" href="#"><i style="background-color: gray; padding: 0.5em; border-radius: 5px; color: white;" class="bi bi-cart3"></i></a>
+              <a th:if="${condicion}" th:href="@{/pedido/list}" href="#"><i style="background-color: gray; padding: 0.5em; border-radius: 5px; color: white;" class="bi bi-cart3"></i></a>
+                <div th:unless="${condicion}"></div>              
+            </div>
+          </div>
+          <div th:unless="${session}"></div> -->
+          
+         
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          
+        </div>
+      </div>
+    </nav>
+
+</body>
+
+</html>
