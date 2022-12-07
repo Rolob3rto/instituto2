@@ -154,7 +154,7 @@ public class AlumnosDAOImpl extends JdbcDaoSupport implements AlumnosDAO {
     }
 
 
-   /*  @Override
+   @Override
     public void updateImg(Alumno alumno) {
 
         String query = "update Alumnos set img = ? where codigo = ?";
@@ -170,5 +170,5 @@ public class AlumnosDAOImpl extends JdbcDaoSupport implements AlumnosDAO {
         };
 
         int update = getJdbcTemplate().update(query, params, types);
-    } */
+    } 
 }

@@ -2,6 +2,8 @@ package com.springprojects.roberto.instituto.instituto.model;
 
 import java.sql.Date;
 
+import com.springprojects.roberto.instituto.instituto.Utils.ImageUtil;
+
 public class Alumno {
     private int codigo;
     private String nombre;
@@ -10,6 +12,8 @@ public class Alumno {
     private String dni;
     private Date fechaNacimiento;
     private boolean nuevo;
+    private byte[] img;
+
     
     public Alumno(int codigo, String nombre, String apellidos, String email, String dni, Date fechaNacimiento,
              boolean nuevo) {
@@ -83,6 +87,18 @@ public class Alumno {
     
         public void setFechaNacimiento(Date fechaNacimiento) {
             this.fechaNacimiento = fechaNacimiento;
+        }
+
+        public byte[] getImg() {
+            return img;
+        }
+    
+        public void setImg(byte[] fileName) {
+            this.img = fileName;
+        }
+    
+        public String getImageView(){
+            return ImageUtil.getImgData(this.img);
         }
 
     @Override

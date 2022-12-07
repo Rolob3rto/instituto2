@@ -18,4 +18,6 @@ public interface AlumnosDAO {
     public void update(Alumno alumno);
 
     public void delete(int codigo);
+
+    public void updateImg(Alumno alumno);
 }
