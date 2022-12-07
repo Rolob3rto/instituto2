@@ -8,8 +8,8 @@
 
   <div class="container">
     
-        <h1 th:text="#{alumnos.list.titulo}">Alumnos</h1>
-        <a class="btn btn-primary" th:text="#{alumnos.list.nuevoAlumno}" th:href="@{/alumnos/create}" href="new.html"
+        <h1>Alumnos</h1>
+        <a class="btn btn-primary" th:href="@{/alumnos/create}" href="new.html"
         role="button">
         Crear</a>
 
@@ -36,10 +36,10 @@
           <td th:text="${alumno.email}">---</td>
           <td th:text="${alumno.nuevo} ? 'SI' : 'NO'">---</td>
           <td>          
-            <a class="btn btn-primary" th:text="#{alumnos.list.editar}" th:href="@{/alumnos/edit?codigo=}+${alumno.codigo}" href="edit.html"
+            <a class="btn btn-primary" th:href="@{/alumnos/edit?codigo=}+${alumno.codigo}" href="edit.html"
               role="button">
               Editar</a>
-            <a class="btn btn-primary" th:text="#{alumnos.list.borrar}" th:href="@{/alumnos/delete/}+${alumno.codigo}" href="#" role="button"><i class="bi bi-trash"></i>Borrar</a>
+            <a class="btn btn-primary" th:href="@{/alumnos/delete/}+${alumno.codigo}" href="#" role="button"><i class="bi bi-trash"></i>Borrar</a>
           </td>
         </tr>      
       </tbody>
