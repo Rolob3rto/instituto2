@@ -1,4 +1,4 @@
-package com.springprojects.roberto.instituto.model;
+package com.springprojects.roberto.instituto.instituto.model;
 
 public class Alumno {
     private int codigo;
